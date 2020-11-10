@@ -12,7 +12,7 @@
 		 * Main div
 		 * @type {Object}
 		 */
-		var main = document.getElementById('fullpage');
+		var main = document.getElementById('main');
 		
 		/**
 		 * Sections div
