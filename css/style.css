@@ -23,7 +23,12 @@ body {
 a {
   color: #c0a672;
   text-decoration: none;
+  -webkit-tap-highlight-color:transparent;
+
 }
+
+
+
 
 .cd-image-replace {
   /* replace text with image */

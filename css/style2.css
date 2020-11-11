@@ -6,6 +6,9 @@ body {
     color: #6a6a6a
 }
 
+input:focus{
+	outline:none;
+}
 #nav-bar,
 img.fullwidth {
     width: 100%
@@ -2100,7 +2103,7 @@ footer .image-divider.fixed-height {
 #banner-date {
     font-family: Oswald, 'Noto Sans KR', sans-serif;
     letter-spacing: 3px;
-    font-size: 14px
+    font-size: 25px
 }
 
 .his-her-name {
@@ -2874,13 +2877,13 @@ button.mfp-close {
 
         #thank,
         #you {
-            font-size: 45px;
+            font-size: 55px;
             line-height: 35px
         }
 
         #footer-couple-name {
             font-family: Oswald, 'Noto Sans KR', sans-serif;
-            font-size: 15px;
+            font-size: 30px;
             color: #FFF;
             letter-spacing: 3px;
             margin-top: 10px
