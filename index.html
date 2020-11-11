@@ -494,9 +494,9 @@
                     var h = asks[ask_no].offsetHeight | 0;
                     ask_height += h;
                     ask_height += 10;
-                    if (ask_height > 700) {
-                        askContainer.style.transform = "translateY(-" + (ask_height - 700) + "px)";
-                        askContainer.style['-webkit-transform'] = "translateY(-" + (ask_height - 700) + "px)";
+                    if (ask_height > 500) {
+                        askContainer.style.transform = "translateY(-" + (ask_height - 500) + "px)";
+                        askContainer.style['-webkit-transform'] = "translateY(-" + (ask_height - 500) + "px)";
                     }
                     e.preventDefault();
                     return false;
