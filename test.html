@@ -126,7 +126,7 @@
                     <div id="qnaContent" style="transition:all .4s ease-out;">
                         <p class="ask question active">어떻게 만나게 되셨나요?</p>
                         <div class="ask kyung">
-                            <p>제가 다니는 회사에 또띠가 어느날 나타났어요!</p>
+                            <p>한글날에 친구를 만났는데 갑자기 소개팅을 가자고했어요!</p>
                         </div>
                         <div class="ask kyeom">
                             <p>어쩌다가 블로그 댓글로 연락이 시작되어서<br />제가 먼저 아이스티를 먹자 했어요.</p>
@@ -492,15 +492,69 @@
                     var h = asks[ask_no].offsetHeight | 0;
                     ask_height += h;
                     ask_height += 10;
-                    if (ask_height > 730) {
-                        askContainer.style.transform = "translateY(-" + (ask_height - 730) + "px)";
-                        askContainer.style['-webkit-transform'] = "translateY(-" + (ask_height - 730) + "px)";
+                    if (ask_height > 750) {
+                        askContainer.style.transform = "translateY(-" + (ask_height - 750) + "px)";
+                        askContainer.style['-webkit-transform'] = "translateY(-" + (ask_height - 750) + "px)";
                     }
                     e.preventDefault();
                     return false;
                 }, false);
 
-               
+                var stepFuncs = {
+                    1: {
+                        back: 'rgb(244,139,14)',
+                        after: function() {
+                            $("div.steps")[1].classList.add("start");
+                        }
+                    },
+                    2: {
+                        back: '#8f51e6',
+                        before: function() {
+                            force.start();
+                        }
+                    },
+                    3: {
+                        back: '#369',
+                        before: function() {
+                            force.stop();
+                            $("div.steps")[3].classList.add("start");
+                            $("#btnNext")[0].style.display = "none";
+                            $("#btnAsk")[0].style.display = "block";
+                        }
+                    },
+                    4: {
+                        back: '#52c8dc'
+                    }
+                };
+
+
+
+                var wrap = $("div.viewPort")[0];
+                var title = $("#littleTitle")[0];
+                var curStep = 0;
+                var transitionend = function(e) {
+                    $("div.steps")[curStep].classList.add('shown');
+                    if (stepFuncs[curStep] && stepFuncs[curStep].after) stepFuncs[curStep].after();
+                    wrap.removeEventListener('transitionend', transitionend);
+                }
+
+                var turnNext = function() {
+                    wrap.classList.remove("step" + curStep);
+                    $("div.steps")[curStep].classList.remove('shown');
+                    curStep += 1;
+                    if (stepFuncs[curStep].back) document.body.style.backgroundColor = stepFuncs[curStep].back;
+                    title.innerHTML = stepTitles[curStep - 1];
+                    wrap.classList.add("step" + curStep);
+                    wrap.addEventListener('transitionend', transitionend, false);
+                    if (stepFuncs[curStep] && stepFuncs[curStep].before) stepFuncs[curStep].before();
+                    if (curStep >= 4) $("#btnNext")[0].style.display = "none";
+                };
+
+                $("#btnNext")[0].addEventListener("click", function() {
+                    turnNext();
+                });
+
+                turnNext();
             });
         </script>
 </body>

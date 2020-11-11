@@ -271,12 +271,12 @@ p.question:after {
 	position:absolute;
 	margin-left:-130px;
 	border-radius:50px;
-	background:url('img/kyung.jpg') center center no-repeat;
+	background:url('../img/kyung.jpg') center center no-repeat;
 	background-size:100px 100px;
 }
 
 .kyeom:before{
-	background:url('img/kyeom.jpg') center center no-repeat;
+	background:url('../img/kyeom.jpg') center center no-repeat;
 }
 
 .kyeom>p:before, .kyung>p:before  {
