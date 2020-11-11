@@ -236,7 +236,7 @@ body { transition:background-color .5s linear; }
 #outro { top:3200px; left:0; }
 #qna { top:2400px; left:0; padding:20px; }
 
-#qna p { display:table; font-size:25px; }
+#qna p { display:table; }
 
 p.question, div.kyeom, div.kyung {
 	clear:both; display:block;
@@ -260,7 +260,7 @@ p.question:after {
 }
 
 .kyeom>p, .kyung>p{
-	padding:20px; border-radius:5px; background:white; color:#333; clear:both;float:left; font-size:25px;
+	padding:20px; border-radius:5px; background:white; color:#333; clear:both;float:left; 
 	margin-top:30px;
 }
 
@@ -271,18 +271,18 @@ p.question:after {
 	position:absolute;
 	margin-left:-130px;
 	border-radius:50px;
-	background:url('../img/kyung.jpg') center center no-repeat;
+	background:url('/../img/kyung.jpg') center center no-repeat;
 	background-size:100px 100px;
 }
 
 .kyeom:before{
-	background:url('../img/kyeom.jpg') center center no-repeat;
+	background:url('/../img/kyeom.jpg') center center no-repeat;
 }
 
 .kyeom>p:before, .kyung>p:before  {
 	content:'경미';
 	position:absolute;
-	font-size:24px;
+	
 	color:white;
 	font-weight:bold;
 	top:-2px;
@@ -310,11 +310,17 @@ p.question:after {
 .step4>.steps { -webkit-transform:translateY(-3200px); transform:translateY(-3200px); }
 
 
+.
+.button
+{
+   margin: auto;
+   width: 50%;
+}
 #btnNext, #btnAsk { 
-    position:absolute; font-weight:bold; bottom:15px; width:250px; height:100px; left:50%; margin-left:-169px; border-radius:30px; background:#f0d264; color:#585015; border:solid 1px #c7b110; font-size:30px; 
+    position:absolute; font-weight:bold; bottom:10px; width:200px; height:100px; left:50%; margin-left:-100px; border-radius:20px; background:#f0d264; color:#585015; border:solid 1px #c7b110; font-size:30px; text-align: center; 
     
     color: white;
-    padding: 15px 25px;
+    padding: 0px 0px;
     display: inline-block;
     border: 1px solid rgba(0,0,0,0.21);
     border-bottom-color: rgba(0,0,0,0.34);
