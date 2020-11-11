@@ -1067,7 +1067,7 @@ img.with-border {
 
 .image-divider.fixed-height,
 .video-divider.fixed-height {
-    height: 600px;
+    height: 100%;
     width: 100%;
     padding: 0
 }

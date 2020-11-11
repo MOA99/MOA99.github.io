@@ -34,6 +34,15 @@ a {
   color: transparent;
 }
 
+.lv-container{
+    height: 200px;
+}
+.chat{
+    width: 100%;
+    height: 100%;
+    background: #a1c0d6;
+    position: absolute;
+}
 /* -------------------------------- 
 
 Navigation trigger - visible on small devices only
