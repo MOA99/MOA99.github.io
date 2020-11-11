@@ -271,16 +271,16 @@ p.question:after {
 	position:absolute;
 	margin-left:-130px;
 	border-radius:50px;
-	background:url('/static/images/icons/l_kyung.jpg') center center no-repeat;
+	background:url('img/kyung.jpg') center center no-repeat;
 	background-size:100px 100px;
 }
 
 .kyeom:before{
-	background:url('/static/images/icons/kyeom.jpg') center center no-repeat;
+	background:url('img/kyeom.jpg') center center no-repeat;
 }
 
 .kyeom>p:before, .kyung>p:before  {
-	content:'또띠';
+	content:'경미';
 	position:absolute;
 	font-size:24px;
 	color:white;
@@ -290,7 +290,7 @@ p.question:after {
 }
 
 .kyung>p:before {
-	content:'규';
+	content:'경섭';
 }
 
 .kyeom>p:after, .kyung>p:after {
@@ -310,7 +310,18 @@ p.question:after {
 .step4>.steps { -webkit-transform:translateY(-3200px); transform:translateY(-3200px); }
 
 
-#btnNext, #btnAsk { position:absolute; font-weight:bold; bottom:36px; width:338px; height:100px; left:50%; margin-left:-169px; border-radius:30px; background:#ffe313; color:#585015; border:solid 1px #c7b110; font-size:40px; }
+#btnNext, #btnAsk { 
+    position:absolute; font-weight:bold; bottom:15px; width:250px; height:100px; left:50%; margin-left:-169px; border-radius:30px; background:#f0d264; color:#585015; border:solid 1px #c7b110; font-size:30px; 
+    
+    color: white;
+    padding: 15px 25px;
+    display: inline-block;
+    border: 1px solid rgba(0,0,0,0.21);
+    border-bottom-color: rgba(0,0,0,0.34);
+    text-shadow: 0 1px 0 rgba(0,0,0,0.15);
+    box-shadow: 0 1px 0 rgba(255,255,255,0.34) inset, 0 2px 0 -1px rgba(0,0,0,0.13), 0 3px 0 -1px rgba(0,0,0,0.08), 0 3px 13px -1px rgba(0,0,0,0.21);
+}
+}
 #btnAsk { display:block;}
 
 #kyeom_intro, #kyung_intro {
