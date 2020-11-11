@@ -243,7 +243,7 @@ p.question, div.kyeom, div.kyung {
 	margin-bottom:10px;
 }
 
-p.question {  padding:10px; border-radius:5px; background:yellow; color:#333; float:right; }
+p.question {  padding:20px; border-radius:5px; background:yellow; color:#333; float:right; }
 div.kyeom, div.kyung { text-align:left; min-height:150px; padding-left:130px; margin-bottom:10px; }
 
 .ask { opacity:0; transform:translateY(10px); -webkit-transform:translateY(10px); }
@@ -260,7 +260,7 @@ p.question:after {
 }
 
 .kyeom>p, .kyung>p{
-	padding:10px; border-radius:5px; background:white; color:#333; clear:both;float:left; 
+	padding:20px; border-radius:5px; background:white; color:#333; clear:both;float:left; 
 	margin-top:30px;
 }
 
